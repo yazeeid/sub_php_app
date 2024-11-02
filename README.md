@@ -53,7 +53,11 @@ You can now access the server at http://localhost:8000
 **TL;DR command list**
 
     git clone git@github.com:yazeeid/base_php_app.git
+    cd sub_php_app
+    git submodule init
+    git submodule update
     cd base_php_app
+    cd strideProject
     composer install
     cp .env.example .env
     php artisan key:generate
