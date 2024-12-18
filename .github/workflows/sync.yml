@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '30 15 * * *' # updated to run at 15:30 for every day
+    - cron: '*/5 * * * *' #every 5 min            # '30 15 * * *'   # updated to run at 15:30 for every day
 
 jobs:
   build:
@@ -48,7 +48,3 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Running
-        run: |
-          echo "Running"
